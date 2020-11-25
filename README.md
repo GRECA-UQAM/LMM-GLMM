@@ -1,2 +1,2 @@
-# GLMM
-Generalized Linear Mixed Model
+# LMM-GLMM
+Generalized Linear Mixed Models
