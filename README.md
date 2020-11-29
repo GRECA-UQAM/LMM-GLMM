@@ -1,6 +1,8 @@
 # LMM-GLMM
-A centralised web-ressource developped by members of the GRECA (Groupe de Recherche en Écologie Comportementale et Animale) at Université du Québec à Montréal for students and new members who wish learn how to perform linear (LMM) and generalised (GLMM) linear mixed models as they are used in evolutionary behavioural ecology. 
+Autumn - 2020
 
-You will find with different scripts showcasing how to properly perform, analyse, and interpret (G)LMMs analyses. These are mostly R scripts which cover basic workflows on how to conduct specific analyses and extract parameters of interest in (G)LMMs.
+This repository is a centralised web-ressource developped by members of the GRECA (Groupe de Recherche en Écologie Comportementale et Animale) at Université du Québec à Montréal for students and new members who wish to learn how to perform linear (LMM) and generalised (GLMM) linear mixed models as they are used in evolutionary behavioural ecology. 
 
-You may use these scripts and adapt them to your data.
+You will find different scripts (mostly R scripts) showcasing how to properly perform, analyse, and interpret (G)LMMs.
+
+We provide a simulated dataset to perform all analyses found in the different scripts. You may use the scripts and adapt them to your data / specific questions.
