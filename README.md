@@ -1,5 +1,5 @@
 # LMM-GLMM
-## Autumn - 2020
+## Winter - 2021
 
 This repository is a centralised web-ressource developped by members of the GRECA (Groupe de Recherche en Écologie Comportementale et Animale) at Université du Québec à Montréal. It is developped to provide tools for scientists who wish to compute linear (LMM) and generalised (GLMM) linear mixed models within an evolutionary behavioural ecology framework.
 
