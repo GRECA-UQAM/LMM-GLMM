@@ -59,7 +59,7 @@
 # We use one continuous covariate, one categorical, and fit their interaction
 # indvidual as random effect as there are repeated measures
 
-  mod <- lmer(y ~   x1 +  x3  +  x1*x3 +(1|id), data=data)
+  mod <- lmer(y ~ x1 + x3 + x1:x3 + (1 | id), data = data)
 
 # We look at the summary
 # Here we can extract the estimate of fixed effects
@@ -100,11 +100,11 @@
 
 # We also need to extract the interaction x1:x3b, to get the slope for the continuous var, at level b
 # We need to take the estimate of x1 + x1:x3b from the summary(mod) and make the calculation ourselves
-  summary(mod)$coefficients[1,1]+ summary(mod)$coefficients[4,1]
+  summary(mod)$coefficients[1, 1]+ summary(mod)$coefficients[4, 1]
 
 # And here is its associated Cri
 # If you have more variables in the model you need to change [,1] and [,3] depending on the fixef stucture
-  quantile((bsim@fixef[,1] + bsim@fixef[,3] ),   prob = c(0.025, 0.975))
+  quantile((bsim@fixef[, 1] + bsim@fixef[, 3] ),   prob = c(0.025, 0.975))
 
 # Check the structure of random effects simulations
   str(bsim@ranef)
@@ -154,11 +154,12 @@
 
 # CRi for interaction, remember to change fixef [,1] and [,3] depending on your model structure
     CIinter <- function() {
-    bdiff <- bsim@fixef[,1] + bsim@fixef[, 3]
+    bdiff <- bsim@fixef[, 1] + bsim@fixef[, 3]
     q <- quantile(bdiff, prob = c(0.025, 0.975))
     q <- t(q)
     round(q, 2)
     }
+
     CIinter()
 
 # ============================================================
